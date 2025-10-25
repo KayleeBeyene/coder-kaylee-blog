@@ -12,7 +12,7 @@ This document outlines the conventions and commands for AI agents working in thi
 
 - **Framework:** Next.js and React.
 - **Language:** TypeScript with strict mode.
-- **Formatting:** Use Prettier with default settings.
+- **Formatting:** Use Prettier with default settings. Run `npx prettier --write .` to format the code.
 - **Imports:** Use path aliases `@/*` for imports from the root directory.
 - **Naming:** Follow standard React/TypeScript conventions (e.g., PascalCase for components, camelCase for variables and functions).
 - **Error Handling:** Use try/catch blocks for async operations and handle errors gracefully.
