@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# coderKaylee Blog
 
-## Getting Started
+This repository contains the source code for the coderKaylee blog, a personal blog documenting the journey of learning to code.
 
-First, run the development server:
+## 🚀 Project Overview
+
+- **Project Type**: Personal Blog / Learning Journal
+- **Goal**: To document the journey of learning to code, track progress, solidify understanding, and connect with a community of learners and developers.
+- **Core Message**: "Learning to code is a challenging but rewarding journey of continuous growth. You can do it!"
+
+## ⚙️ Technical Stack
+
+- **Framework**: Next.js 16
+- **Language**: TypeScript (Strict Mode)
+- **Styling**: Tailwind CSS
+- **UI Components**: shadcn-ui
+- **Linting**: ESLint
+- **Package Manager**: npm
+
+## 🏁 Getting Started
+
+### Prerequisites
+
+- Node.js (v20 or later)
+- npm
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/coder-kaylee-blog.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd coder-kaylee-blog
+   ```
+3. Install the dependencies:
+   ```bash
+   npm install
+   ```
+
+### Running the Development Server
+
+To start the development server, run the following command:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📜 Available Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `npm run dev`: Starts the development server.
+- `npm run build`: Creates a production-ready build of the application.
+- `npm run start`: Starts the production server.
+- `npm run lint`: Lints the codebase using ESLint.
 
-## Learn More
+## 📂 Project Structure
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `app/`: Contains the application's routes, following the Next.js App Router structure.
+- `lib/`: For shared utility functions.
+- `public/`: Stores static assets like images and icons.
+- `AGENTS.md`: Contains specific instructions for AI agents working in this repository.
