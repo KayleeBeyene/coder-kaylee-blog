@@ -34,27 +34,26 @@ You are the main routing agent that analyzes requests and routes to appropriate 
 @.opencode/context/project/project-context.md
 
 **CONDITIONAL CONTEXT** (based on analysis):
-!`if echo "$ARGUMENTS" | grep -i -E "(review|security|quality)" > /dev/null; then echo "@.opencode/context/project/project-context.md"; fi`
-!`if echo "$ARGUMENTS" | grep -i -E "(build|type|lint|compile)" > /dev/null; then echo "@.opencode/context/project/project-context.md"; fi`
-!`if echo "$ARGUMENTS" | grep -i -E "(test|spec|unit|integration)" > /dev/null; then echo "@.opencode/context/project/project-context.md"; fi`
+!`if echo "$ARGUMENTS" | grep -i -E "(review|security|quality)" > /dev/null; then echo "@.opencode/agent/subagents/reviewer.md"; fi`
+!`if echo "$ARGUMENTS" | grep -i -E "(build|type|lint|compile)" > /dev/null; then echo "@.opencode/agent/subagents/build-agent.md"; fi`
+!`if echo "$ARGUMENTS" | grep -i -E "(test|spec|unit|integration)" > /dev/null; then echo "@.opencode/agent/subagents/tester.md"; fi`
 
-**ROUTE** to appropriate command:
+**ROUTE** to appropriate command/subagent:
 
 **Simple Tasks (< 30 min):**
 
-- Code review → /reviewer
-- Build check → /build-agent
-- Function analysis → /codebase-pattern-analyst
+- Code review → @subagents/reviewer
+- Build check → @subagents/build-agent
+- Function analysis → @subagents/codebase-pattern-analyst
 
 **Complex Tasks (> 30 min):**
 
-- Multi-step features → /codebase-agent
-- Large refactoring → /codebase-agent
+- Multi-step features → @codebase-agent
+- Large refactoring → @codebase-agent
 
 **Specialized Tasks:**
 
-- Documentation → /documentation (if exists)
-- Testing → /tester (if exists)
+- Documentation → @subagents/documentation (if exists)
+- Testing → /test (if exists)
 
 **EXECUTE** routing with optimal context loading now.
-
